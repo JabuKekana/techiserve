@@ -1,0 +1,1029 @@
+ @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+}
+
+header {
+  position: fixed;
+  top: -2;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+}
+
+.navbar {
+  display: flex;
+  padding: 0 10px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar input#menu-toggler {
+  display: none;
+}
+
+.navbar #hamburger-btn {
+  cursor: pointer;
+  display: none;
+}
+
+.navbar .all-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .all-links li {
+  position: relative;
+  list-style: none;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  width: 160px;
+}
+
+
+header a, footer a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: rgb(4, 19, 28);
+  height: 100%;
+  padding: 20px 0;
+  display: inline-block;
+}
+
+header a:hover, footer a:hover {
+  color: #ddd;
+}
+
+.menu-bar {
+  fill: rgb(0, 0, 0); /* Change this to your desired color */
+}
+
+.homepage {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: url("./Images/header-bg.png");
+  background-position: center 65%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.homepage::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.homepage .content {
+  display: flex;
+  height: 85%;
+  z-index: 3;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.homepage .content h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.homepage .content .text {
+  margin-bottom: 50px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.homepage .content .text .greenText {
+    margin-bottom: 50px;
+    color: #8bca62;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+
+.homepage .content .hopepage-btn {
+  color: #000;
+  display: block;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 0 10px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background: #fff;
+  border: 2px solid #fff;
+  transition: 0.4s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.homepage .content .hopepage-btn:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.3);
+}
+
+section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px 0 0;
+}
+
+section h2 {
+  font-size: 2rem;
+}
+
+section > p {
+  text-align: center;
+}
+
+section .cards {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin-top: 50px;
+  padding: 0 10px;
+  justify-content: space-between;
+} 
+
+
+/* ABOUT SECTION STYLING STARTS HERE */
+
+section.about {
+  margin: 0 auto;
+  max-width: 95%;
+  background-color: white;
+}
+
+.about .company-info {
+  margin-top: 30px;
+}
+
+.about .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-content {
+  flex: 1;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.about-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-wrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 10px; /* Changed margin-left to margin-right */
+}
+
+.heading-img {
+  max-width: 100%;
+  height: auto;
+  width: 80px;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+  .about .row {
+    flex-direction: column;
+  }
+
+  .image-container {
+    justify-content: center;
+  }
+}
+/* ABOUT SECTION STYLING ENDS HERE */
+
+
+
+
+
+
+/* TARGEWTING A PROBLEM SECTION  STARTS*/
+
+ 
+/* Common styles for all screen sizes */
+.problem-section h3 {
+  padding: 40px;
+  color: #333;
+  text-align: center;
+}
+
+:root {
+  --color-text: #fff;
+  --color-background: linear-gradient(to right bottom, #ffb88e, #ea5753);
+  --color-container: linear-gradient(to right bottom, rgba(255, 184, 142, 0.44), rgba(255, 255, 255, 0.5));
+  --color-list: rgba(234, 87, 83, 0.7);
+}
+
+.problem-section-list {
+  width: 40vw;
+  padding: 3rem;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  position: relative;
+  border-radius: 3rem;
+  background: var(--color-container);
+}
+
+.problem-section-list::-webkit-scrollbar {
+  width: 0;
+}
+
+.problem-section-list::before {
+  content: "";
+  top: -10rem;
+  left: -10rem;
+  width: 40rem;
+  height: 40rem;
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.problem-section-list::after {
+  content: "";
+  bottom: 0rem;
+  right: -10rem;
+  width: 40rem;
+  height: 40rem;
+  margin-bottom: -25rem;
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 185, 142, 0.6);
+}
+
+.problem-section-list h1 {
+  top: 0;
+  margin: 0;
+  padding: 6rem 0;
+  padding-top: 7rem;
+  position: sticky;
+  text-align: center;
+  color: var(--color-text);
+  margin-bottom: 3rem;
+  box-shadow: 0 7px 2rem #ea5753;
+  background: rgba(234, 87, 83, 0.7);
+}
+
+.problem-section-list ol {
+  margin: 0;
+  gap: 1rem;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  place-items: center;
+  flex-direction: column;
+  counter-reset: my-counter;
+}
+
+.problem-section-list li {
+  width: 40rem;
+  text-align: center;
+  color: var(--color-text);
+  border-radius: 3rem;
+  background: var(--color-list);
+  counter-increment: my-counter;
+  padding: 1.1rem 1.5rem 1.1rem 1.5rem;
+}
+
+.problem-section-list li::before {
+  content: counter(my-counter) ". ";
+}
+
+/* Responsive styles for screen sizes smaller than 768px */
+@media (max-width: 768px) {
+  .problem-section-list {
+    width: 90vw; /* Adjust the width as needed */
+    padding: 2rem; /* Adjust the padding as needed */
+  }
+}
+
+/* Additional media queries for other screen sizes can be added as needed */
+
+
+
+
+/* TARGEWTING A PROBLEM SECTION ENDS */
+
+
+
+
+
+
+
+/* Common styles for all screen sizes */
+.use-cases-container {
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.use-cases-container .card {
+  height: 280px;
+  max-width: 350px;
+  margin: 0 20px;
+  background: white;
+  transition: 0.4s;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.use-cases-container .card .img {
+  height: 200px;
+  width: 100%;
+}
+
+.use-cases-container .card .img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.use-cases-container .card .top-text {
+  padding: 5px;
+}
+
+.use-cases-container .card .top-text .name {
+  font-size: 25px;
+  font-weight: 600;
+  color: #202020;
+}
+
+.use-cases-container .card .top-text p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #e74c3c;
+  line-height: 20px;
+}
+
+.use-cases-container .card .bottom-text {
+  padding: 0 20px 10px 20px;
+  margin-top: 5px;
+  background: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.1s;
+}
+
+.use-cases-container .card:hover .bottom-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.use-cases-container .card .bottom-text .text {
+  text-align: justify;
+}
+
+.use-cases-container .card .bottom-text .btn {
+  margin: 10px 0;
+  text-align: left;
+}
+
+.use-cases-container .card .bottom-text .btn a {
+  text-decoration: none;
+  background: #e74c3c;
+  color: #f2f2f2;
+  padding: 5px 8px;
+  border-radius: 3px;
+  display: inline-flex;
+  transition: 0.2s;
+}
+
+.use-cases-container .card .bottom-text .btn a:hover {
+  transform: scale(0.9);
+}
+
+/* Responsive styles for screen sizes smaller than 978px */
+@media screen and (max-width: 978px) {
+  .use-cases-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  .use-cases-container .card {
+    max-width: 100%;
+    margin: 20px 0;
+  }
+
+  /* Add fixed height to .use-cases section when the cards are expanded */
+  .use-cases.expanded {
+    height: auto; /* Set to auto to adjust the height as per content */
+  }
+}
+
+/* Additional media queries for other screen sizes can be added as needed */
+
+
+
+ 
+
+
+
+
+
+
+
+/* SERVICES SECTION STYLING STARTS */
+
+
+
+  
+
+
+/* SERVICES SECTION STYLING ENDS */
+
+
+
+
+/* JOURNEY SECTION STYLING STARTS */
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+
+.journey-section,
+.journey-section::before,
+.journey-section::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.journey-section {
+  --color: rgba(30, 30, 30);
+  --bgColor: rgba(245, 245, 245);
+  min-height: 100vh;
+  display: grid;
+  align-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+  color: var(--color);
+  background: var(--bgColor);
+}
+
+.journey-section h1 {
+  text-align: center;
+}
+.journey-section h3 {
+  text-align: center;
+}
+
+.journey-unordered-list {
+  --col-gap: 2rem;
+  --row-gap: 2rem;
+  --line-w: 0.25rem;
+  display: grid;
+  grid-template-columns: var(--line-w) 1fr;
+  grid-auto-columns: max-content;
+  column-gap: var(--col-gap);
+  list-style: none;
+  width: min(60rem, 90%);
+  margin-inline: auto;
+}
+
+/* line */
+.journey-unordered-list::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 1 / span 20;
+  background: rgb(225, 225, 225);
+  border-radius: calc(var(--line-w) / 2);
+}
+
+/* columns*/
+
+/* row gaps */
+.journey-unordered-list li:not(:last-child) {
+  margin-bottom: var(--row-gap);
+}
+
+/* card */
+.journey-unordered-list li {
+  grid-column: 2;
+  --inlineP: 1.5rem;
+  margin-inline: var(--inlineP);
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: min-content min-content min-content;
+}
+
+/* date */
+.journey-unordered-list li .date {
+  --dateH: 3rem;
+  height: var(--dateH);
+  margin-inline: calc(var(--inlineP) * -1);
+
+  text-align: center;
+  background-color: var(--accent-color);
+
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  display: grid;
+  place-content: center;
+  position: relative;
+
+  border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
+}
+
+/* date flap */
+.journey-unordered-list li .date::before {
+  content: "";
+  width: var(--inlineP);
+  aspect-ratio: 1;
+  background: var(--accent-color);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
+  position: absolute;
+  top: 100%;
+
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  right: 0;
+}
+
+/* circle */
+.journey-unordered-list li .date::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  aspect-ratio: 1;
+  background: var(--bgColor);
+  border: 0.3rem solid var(--accent-color);
+  border-radius: 50%;
+  top: 50%;
+
+  transform: translate(50%, -50%);
+  right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+}
+
+/* title descr */
+.journey-unordered-list li .title,
+.journey-unordered-list li .descr {
+  background: var(--bgColor);
+  position: relative;
+  padding-inline: 1.5rem;
+}
+.journey-unordered-list li .title {
+  overflow: hidden;
+  padding-block-start: 1.5rem;
+  padding-block-end: 1rem;
+  font-weight: 500;
+}
+.journey-unordered-list li .descr {
+  padding-block-end: 1.5rem;
+  font-weight: 300;
+}
+
+/* shadows */
+.journey-unordered-list li .title::before,
+.journey-unordered-list li .descr::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  left: 50%;
+  border-radius: 50%;
+  filter: blur(4px);
+  transform: translate(-50%, 50%);
+}
+.journey-unordered-list li .title::before {
+  bottom: calc(100% + 0.125rem);
+}
+
+.journey-unordered-list li .descr::before {
+  z-index: -1;
+  bottom: 0.25rem;
+}
+
+@media (min-width: 40rem) {
+  .journey-unordered-list {
+    grid-template-columns: 1fr var(--line-w) 1fr;
+  }
+  .journey-unordered-list::before {
+    grid-column: 2;
+  }
+  .journey-unordered-list li:nth-child(odd) {
+    grid-column: 1;
+  }
+  .journey-unordered-list li:nth-child(even) {
+    grid-column: 3;
+  }
+
+  /* start second card */
+  .journey-unordered-list li:nth-child(2) {
+    grid-row: 2/4;
+  }
+
+  .journey-unordered-list li:nth-child(odd) .date::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    left: 0;
+  }
+
+  .journey-unordered-list li:nth-child(odd) .date::after {
+    transform: translate(-50%, -50%);
+    left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+  }
+  .journey-unordered-list li:nth-child(odd) .date {
+    border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+  }
+}
+
+  
+
+/* JOURNEY SECTION STYLING ENDS */
+
+
+
+
+
+
+
+
+
+/* TEAM SECTION STYLING STARTS */
+
+.team-section {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat',sans-serif;
+}
+.team-section .cards{
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+}
+.team-section .cards h2.header{
+  font-size: 40px;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.team-section .services{
+  display: flex;
+  align-items: center;
+}
+.team-section .team-content{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 4px;
+  transition: all .3s ease;
+}
+.team-section .team-content .fab{
+  font-size: 70px;
+  margin: 16px 0;
+}
+.team-section .team-content > *{
+  flex: 1 1 100%;
+}
+.team-section .team-content:hover{
+  color: white;
+}
+.team-section .team-content:hover a{
+  border-color: white;
+  background: white;
+}
+.team-section .content-1:hover{
+  border-color: #1DA1F2;
+  background: #1DA1F2;
+}
+.team-section .content-1:hover a{
+  color: #1DA1F2;
+}
+.team-section .content-2:hover{
+  border-color: #E1306C;
+  background: #E1306C;
+}
+.team-section .content-2:hover a{
+  color: #E1306C;
+}
+.team-section .content-3:hover{
+  border-color: #ff0000;
+  background: #ff0000;
+}
+.team-section .content-3:hover a{
+  color: #ff0000;
+}
+.team-section .team-content h2{
+  font-size: 30px;
+  margin: 16px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.team-section .team-content p{
+  font-size: 17px;
+  font-family: 'Poppins',sans-serif;
+}
+.team-section .team-content a{
+  margin: 22px 0;
+  background: black;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid black;
+  padding: 15px 0;
+  border-radius: 25px;
+  transition: .3s ease;
+}
+.team-section .team-content a:hover{
+  border-radius: 4px;
+}
+@media (max-width: 900px) {
+  .team-section .services{
+    display: flex;
+    flex-direction: column;
+  }
+} */
+
+/* Flip effect styles */
+.flip-container {
+  perspective: 1000px;
+}
+
+.flipper {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.front {
+  z-index: 2;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-color: #f1f1f1;
+}
+
+.team-section .team-content.expanded .back {
+  display: block;
+}
+
+.team-section .team-content:not(.expanded) .back {
+  display: none;
+}
+
+/* ... Remaining CSS styles ... */
+
+
+/* TEAM SECTION STYLING ENDS */
+
+
+
+
+ 
+
+
+
+
+
+section .cards .card {
+  background: #f2f2f2;
+  padding: 40px 15px;
+  list-style: none;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+  margin-bottom: 40px;
+  width: calc(100% / 3 - 30px);
+  text-align: center;
+}
+
+.portfolio .cards .card {
+  padding: 0 0 20px;
+}
+
+.services .card i {
+    font-size: 30px;
+    color: #8bca62;
+    margin-bottom: 30px;
+}
+
+.portfolio .card img {
+  width: 100%;
+  padding-bottom: 10px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.cards .card p {
+  padding: 0 15px;
+  margin-top: 5px;
+}
+
+
+.about .row {
+  padding: 0 10px;
+}
+
+.contact .row {
+  margin: 60px 0 90px;
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact .row .col {
+  padding: 0 10px;
+  width: calc(100% / 2 - 50px);
+}
+
+.contact .col p {
+  margin-bottom: 10px;
+}
+
+.contact .col p i {
+  color: #7a7a7a;
+  margin-right: 10px;
+}
+
+.contact form input {
+  height: 45px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid #bfbfbf;
+}
+
+.contact form textarea {
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  height: 150px;
+  outline: none;
+  resize: vertical;
+  border: 1px solid #bfbfbf;
+}
+
+.contact form button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 17px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #333;
+  transition: 0.2s ease;
+}
+
+.contact form button:hover {
+  background: #525252;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #000;
+  padding: 20px 0;
+}
+
+footer div {
+  padding: 0 10px;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer span {
+  color: #fff;
+}
+
+footer a {
+  padding: 0;
+}
+
+@media screen and (max-width: 860px) {
+  .navbar .all-links {
+    position: fixed;
+    left: -100%;
+    width: 300px;
+    display: block;
+    height: 100vh;
+    top: 75px;
+    background: #333;
+    transition: left 0.3s ease;
+  }
+
+  .navbar #menu-toggler:checked~.all-links {
+    left: 0;
+  }
+
+  .navbar .all-links li {
+    font-size: 18px;
+  }
+
+  .navbar #hamburger-btn {
+    display: block;
+  }
+
+  section > p {
+    text-align: center;
+  }
+
+  section .cards .card {
+    width: calc(100% / 2 - 15px);
+    margin-bottom: 30px;
+  }
+
+  .homepage .content h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .homepage .content .text {
+    font-size: 17px;
+  }
+
+  .content a {
+    font-size: 17px;
+    padding: 9px 20px;
+  }
+
+  .contact .row {
+    flex-direction: column;
+  }
+
+  .contact .row .col {
+    width: 100%;
+  }
+
+  .contact .row .col:last-child {
+    margin-top: 40px;
+  }
+
+  footer a {
+    height: 0;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  section .cards .card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+} 

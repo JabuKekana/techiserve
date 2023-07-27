@@ -12,7 +12,10 @@
     />
   </head>
   <body>
-    <header>
+
+
+    <!--NAV BAR SECTION STARTS-->
+    <header class="nav">
       <nav class="navbar">
         <img src="./Images/Logo.png" class="logo" />
         <input type="checkbox" id="menu-toggler" />
@@ -38,8 +41,14 @@
       </nav>
     </header>
 
+    <!-- NAV BAR SECTION ENDS -->
+
+
+
+    <!--HOME PAGE SECTION ENDS-->
+
     <section class="homepage" id="home">
-      <div class="content">
+      <div class="homepage-content">
         <div class="text">
           <h1>WELCOME TO TECHISERVE</h1>
           <h4>
@@ -52,44 +61,49 @@
       </div>
     </section>
 
+    <!--HOME PAGE SECTION ENDS-->
+
+
+
     <!--ABOUT US SECTION STARTS-->
 
     <section class="about">
       <div class="about-container">
+        <h1 class="section-heading">About</h1>
         <div class="row">
           <div class="about-content">
             <div class="row">
-              <div class="image-wrapper">
-                <img src="./Images/about-img2.png" class="heading-img" />
+              <div class="about-image-wrapper">
+                <img src="./Images/about-img2.png" class="about-heading-img" />
               </div>
               <p>
                 TechIserve is a service provider that is founded with one specific goal in mind, to be the preferred business partner in bridging the gap between business functions and innovative technology solutions.
               </p>
             </div>
             <div class="row">
-              <div class="image-wrapper">
-                <img src="./Images/about-img3.png" class="heading-img" />
+              <div class="about-image-wrapper">
+                <img src="./Images/about-img3.png" class="about-heading-img" />
               </div>
               <p>
                 We are led by Chartered Accountants with a multidisciplinary team that has vast technology and business transformation experience. We are able to bring together our knowledge of effective business processes and technology to develop smart solutions to help differentiate your business.
               </p>
             </div>
             <div class="row">
-              <div class="image-wrapper">
-                <img src="./Images/about-img4.png" class="heading-img" />
+              <div class="about-image-wrapper">
+                <img src="./Images/about-img4.png" class="about-heading-img" />
               </div>
               <p>
                 We are confident that with our access to an ecosystem of transformation enablers such as finance experts, taxation experts, software engineers, and technology software providers, our clients will be able to truly digitize their business in a manner that is value-based and cost-effective.
               </p>
             </div>
           </div>
-          <div class="image-container">
+          <div class="about-image-container">
             <img src="./Images/about-img1.png" class="about-img" />
           </div>
         </div>
       </div>
     </section>
-    
+
 
     <!--ABOUT US SECTION ENDS-->
 
@@ -135,71 +149,79 @@
 
     <!--TARGEWTING A PROBLEM SECTION-->
 
+
+
+
+
+
     <!--SERVICES SECTION STARTS-->
 
-    <section class="services" id="services">
-      <h2>Our Services</h2>
+
+    <section class="services">
+      <h1 class="section-heading">Our Services</h1>
       <p>
-        Our service offerings are focused to enable you to optimize,
-        standardize, centralize and digitize your business operating processes.
+        Our service offerings are focused to enable you to optimize, standardize, centralize and digitize your business operating processes.
       </p>
-      <ul class="cards">
-        <li class="card">
-          <i class="fas fa-chart-line"></i>
-          <h3>Business Process Optimization</h3>
-          <p>We help you redesign your processes to be more efficient.</p>
-        </li>
-        <li class="card">
-          <i class="fas fa-money-bill-wave"></i>
-          <h3>Cost Reduction Analysis</h3>
-          <p>We analyze your operating model and identify cost saving areas.</p>
-        </li>
-        <li class="card">
-          <i class="fas fa-cogs"></i>
-          <h3>Process Automation</h3>
-          <p>
-            Let us help you automate processes to enhance quality and create
-            cost efficiencies.
-          </p>
-        </li>
-        <li class="card">
-          <i class="fas fa-chart-bar"></i>
-          <h3>Data Insights & Analytics</h3>
-          <p>
-            We use your business data to help you manage and make better
-            informed decisions.
-          </p>
-        </li>
-        <li class="card">
-          <i class="fas fa-laptop-code"></i>
-          <h3>Business Application Development</h3>
-          <p>
-            We develop smart solutions to help you manage your business from
-            anywhere & anytime.
-          </p>
-        </li>
-      </ul>
-      <div class="why-our-services">
-        <h4>Why use our services?</h4>
-        <ul class="animated-list">
-          <li>Save on operating costs</li>
-          <li>Identify inefficiencies in processes</li>
-          <li>Manage your business simpler, better and faster</li>
-          <li>Increased agility in decision making</li>
-          <li>Better your customer experience</li>
-        </ul>
-        <p class="animated-text">
-          The future of your business depends on becoming digitally fit!
-        </p>
+      <div class="services-wrapper">
+        <div class="services-card">
+          <button class="services-card-btn"><i class="fas fa-chart-line"></i></button>
+          <h3 class="services-card-title">Business Process Optimization</h3>
+          <p class="services-card-content">We help you redesign your processes to be more efficient.</p>
+        </div>
+        <div class="services-card">
+          <button class="services-card-btn"><i class="fas fa-money-bill-wave"></i></button>
+          <h3 class="services-card-title">Cost Reduction Analysis</h3>
+          <p class="services-card-content">We analyze your operating model and identify cost saving areas.</p>
+        </div>
+        <div class="services-card">
+          <button class="services-card-btn"><i class="fas fa-cogs"></i></button>
+          <h3 class="services-card-title">Process Automation</h3>
+          <p class="services-card-content">Let us help you automate processes to enhance quality and create cost efficiencies.</p>
+        </div>
+        <div class="services-card">
+          <button class="services-card-btn"><i class="fas fa-chart-bar"></i></button>
+          <h3 class="services-card-title">Data Insights & Analytics</h3>
+          <p class="services-card-content">We use your business data to help you manage and make better informed decisions.</p>
+        </div>
+        <div class="services-card">
+          <button class="services-card-btn"><i class="fas fa-laptop-code"></i></button>
+          <h3 class="services-card-title">Business Application Development</h3>
+          <p class="services-card-content">We develop smart solutions to help you manage your business from anywhere & anytime.</p>
+        </div>
       </div>
-    </section>
+      <div class='tile'>
+        <img class='tile-img' style="background-image: url(./Images/services-img.jpg);"/>
+        <div class='tile-info'>
+          <h1>Why use our services?</h1>
+          <p>The future of your business depends on becoming digitally fit!</p>
+          <ul class="animated-list">
+            <li>Save on operating costs</li>
+            <li>Identify inefficiencies in processes</li>
+            <li>Manage your business simpler, better and faster</li>
+            <li>Increased agility in decision making</li>
+            <li>Better your customer experience</li>
+          </ul>
+        </div>
+      </div>
+      <section>
+
+
+
+
+
+
+
+
+
+
+
 
     <!--SERVICES SECTION ENDS-->
 
     <!--THE JOURNEY SECTION STARTS-->
 
     <section class="journey-section">
-      <h1>The Journey</h1>
+      <h1 class="section-heading">The Journey</h1>
       <h3>We see transforming your business as a journey that is based on the below key activities that allows for a holistic transformation cycle.</h3>
       <ul class="journey-unordered-list">
         <li style="--accent-color: #41516c">
@@ -266,246 +288,186 @@
           </div>
         </li>
       </ul>
+
+
     </section>
 
     <!--THE JOURNEY SECTION ENDS-->
 
 
 
-
-<!-- 
-    <section class="portfolio" id="portfolio">
-      <h2>Our Portfolio</h2>
-      <p>Take a look at some of our memorable camping adventures.</p>
-      <ul class="cards">
-        <li class="card">
-          <img src="./Images/targeting-icon1.png" alt="img" />
-          <h3>Business Operating Model Review</h3>
-          <p>
-            •Understanding your business strategy; <br />
-            • Reviewing your organisation structure; <br />
-            • Understanding how you deliver value to your customers? <br />
-            • How do you keep your business safe? <br />
-            • How are key decisions made? <br />
-            • What is the future outlook for the business?
-          </p>
-        </li>
-        <li class="card">
-          <img src="./Images/targeting-icon2.png" alt="img" />
-          <h3>Cost reduction & Process Efficiency Redesign</h3>
-          <p>
-            • Which processes are required and which are not? <br />
-            • Redesigning processes for optimized performance; <br />
-            • Standardizing processes across the business; <br />
-            • Centralizing key processes for better monitoring; <br />
-            • Enabling growth by aligning operating processes to your strategy.
-          </p>
-        </li>
-        <li class="card">
-          <img src="./Images/targeting-icon3.png" alt="img" />
-          <h3>Digitized Business Operating Model</h3>
-          <p>
-            • Better control of your business; <br />
-            • Less room for fraud and losses; <br />
-            • Increased market and revenue opportunities; <br />
-            • Resilient business operating model.
-          </p>
-        </li>
-        <li class="card">
-          <img src="./Images/targeting-icon4.png" alt="img" />
-          <h3>Process Assessment</h3>
-          <p>
-            • Understanding the core processes of your business; <br />
-            • How much is each function of your business costing you? <br />
-            • Manual vs System driven processes; <br />
-            • Measure how effective and efficient your processes are in
-            delivering value; <br />
-            • How efficient are your staff in delivering value? <br />
-          </p>
-        </li>
-        <li class="card">
-          <img src="./Images/targeting-icon5.jpeg" alt="img" />
-          <h3>Business & Process Digitization</h3>
-          <p>
-            • Building cloud based, easy to use applications to assist
-            management in monitoring the business; <br />
-            • Use of data & analytics to inform the management of key metrics;
-            <br />
-            • Automation of manual processes to save costs; <br />
-            • Empowering and training employees to use digital solutions.
-          </p>
-        </li> -->
-        <!-- <li class="card">
-            <img src="./Images/targeting-icon5.jpeg" alt="img" />
-            <h3>Business & Process Digitization</h3>
-            <p>
-                • Building cloud based, easy to use applications to
-                assist management in monitoring the business; <br>
-                • Use of data & analytics to inform the management
-                of key metrics; <br>
-                • Automation of manual processes to save costs; <br>
-                • Empowering and training employees to use digital
-                solutions.
-            </p>
-          </li> -->
-      </ul>
-    </section>
-
     <!--USE CASES SECTION STARTS-->
 
-    <section class="use-cases">
-      <h3>USE CASES</h3>
-      <div class="use-cases-container">
-        <div class="card">
-          <div class="img">
-            <img src="#" />
-          </div>
-          <div class="top-text">
-            <div class="name">Auto Dealer</div>
-            <p>Systems (ADS)</p>
-          </div>
-          <div class="bottom-text">
-            <div class="text">
-              <br /><b>The Problem</b><br /><br />
-              Many used car dealerships complained about operating their
-              business on tiresome and costly manual processes. The current
-              software systems that existed was too costly and not fit for
-              purpose.<br /><br />
-              <b>The Solution</b><br /><br />
-              We performed an in depth business process analyses on many used
-              car dealerships in order to develop a cloud based system that
-              manages used car dealerships in a paperless and autonomous
-              manner.<br /><br />
-              <b>Technology & Approach</b><br /><br />
-              www.autodealersystems.co.za
-            </div>
-            <div class="btn">
-              <a href="#">Read more</a>
-            </div>
-          </div>
+    <div class="uses-cases">
+      <h1 class="section-heading">Use Cases</h1>
+      <details>
+        <summary role="button" tabindex="0">Auto Dealer Systems (ADS)</summary>
+        <div class="use-cases-info">
+          <h3>The Problem</h3><br>
+          <p>Many used car dealerships complained about
+            operating their business on tiresome and costly
+            manual processes. The current software systems that
+            existed was too costly and not fit for purpose.</p><br>
+          <h3>The Solution</h3><br>
+          <p>We performed an in depth business process analyses
+            on many used car dealerships in order to develop a
+            cloud based system that manages used car
+            dealerships in a paperless and autonomous manner.</p><br>
+          <h3>Technology & Approach</h3><br>
+          <p>• www.autodealersystems.co.za</p><br>
         </div>
-        <div class="card">
-          <div class="img">
-            <img src="#" />
-          </div>
-          <div class="top-text">
-            <div class="name">Interactive Business</div>
-            <p>Reporting</p>
-          </div>
-          <div class="bottom-text">
-            <div class="text">
-              <br /><b>The Problem</b><br /><br />
-              A mining operation required an end to end operational performance
-              reporting system. The solution needed to cover reporting for the
-              entire value chain, and cater for easy data capture as well as
-              weekly production reconciliation.<br /><br />
-              <b>The Solution</b><br /><br />
-              A mobile application to capture production data per shift was
-              introduced. The data was then represented in an interactive
-              dashboard and reports, enabling viewing business performance on
-              various metrics and time frames.<br /><br />
-              <b>Technology & Approach</b><br /><br />
-              Mobile application development Data Structuring Analytics &
-              Visualisation
-            </div>
-            <div class="btn">
-              <a href="#">Read more</a>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img">
-            <img src="#" />
-          </div>
-          <div class="top-text">
-            <div class="name">Intelligent Process</div>
-            <p>Automation</p>
-          </div>
-          <div class="bottom-text">
-            <div class="text">
-              <br /><b>The Problem</b><br /><br />
-              A large organization processes bank confirmations for thousands of
-              clients. These confirmations are time consuming and mundane in
-              nature. The was a definite need and business case for
-              automation.<br /><br />
-              <b>The Solution</b><br /><br />
-              A detailed process analysis was performed and the end to end
-              process was automated using a software robot. As a value add,
-              analytics was added to provide much needed insights on the metrics
-              of the process.<br /><br />
-              <b>Technology & Approach</b><br /><br />
-              Process Automation Analytics & Visualisation API integration
-            </div>
-            <div class="btn">
-              <a href="#">Read more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </details>
 
+      <details>
+        <summary role="button" tabindex="0">Interactive Business Reporting</summary>
+        <div class="use-cases-info">
+          <h3>The Problem</h3><br>
+          <p>A mining operation required an end
+            to end
+            operational performance reporting system. The
+            solution needed to cover reporting for the entire
+            value chain, and cater for easy data capture as well as
+            weekly production reconciliation.</h3><br>
+          <p>A mobile application to capture production data per
+            shift was introduced. The data was then represented
+            in an interactive dashboard and reports, enabling
+            viewing business performance on various metrics and
+            time frames.</p><br>
+          <h3>Technology & Approach</h3><br>
+          <p>• Mobile application development<br>
+            • Data Structuring<br>
+            • Analytics & Visualisation</p><br>
+        </div>
+      </details>
+
+      <details>
+        <summary role="button" aria-expanded="false" tabindex="0">Intelligent Process Automation</summary>
+        <div class="use-cases-info">
+          <h3>The Problem</h3><br>
+          <p>A large organization processes bank confirmations for
+            thousands of clients. These confirmations are time
+            consuming and mundane in nature. The was a
+            definite need and business case for automation.</p><br>
+          <h3>The Solution</h3><br>
+          <p>A detailed process analysis was performed and the
+            end to end process was automated using a software
+            robot. As a value add, analytics was added to provide
+            much needed insights on the metrics of the process.</p><br>
+          <h3>Technology & Approach</h3><br>
+          <p>• Process Automation<br>
+            • Analytics & Visualisation<br>
+            • API integration</p><br>
+        </div>
+      </details>
+    </div>
     <!--USE CASES SECTION ENDS-->
 
+
+
+
+
+
+    
     <!--TEAM SECTION CARDS STARTS-->
 
-    <section class="team-section">
-      <div class="cards">
-        <h2 class="header">Team</h2>
-        <div class="services">
-          <div class="team-content content-1">
-            <div class="fas fa-user"></div>
-            <h2>Bilal Essop (CA)SA</h2>
-            <p>Years of experience: 10 years</p>
-            <p>Previous Employment: EY, PwC</p>
-            <p>Qualifications: CA(SA), CISA, CET</p>
-            <p>
-              Skills: Business Improvement, Emerging Technology Strategy &
-              Implementation, Robotic Process Automation, Digital
-              Transformation, Specialised Technology Risk & Assurance
-            </p>
-            <a href="#">Read More</a>
-          </div>
-          <div class="team-content content-2">
-            <div class="fas fa-user"></div>
-            <h2>Mohammad Kajee</h2>
-            <p>Years of experience: 9 years</p>
-            <p>Previous Employment: Exxaro Resources Ltd</p>
-            <p>
-              Qualifications: Bachelor of Science (Hons), Electrical Engineering
-            </p>
-            <p>
-              Skills: Business Improvement, Innovation, Digital Transformation,
-              Operational Excellence, Continuous Improvement
-            </p>
-            <a href="#">Read More</a>
-          </div>
-          <div class="team-content content-3">
-            <div class="fas fa-user"></div>
-            <h2>Asim Ansari</h2>
-            <p>Years of experience: 15 years</p>
-            <p>
-              Previous Employment: EY, Hollard, Bank of Athens, Super Group,
-              Cell C
-            </p>
-            <p>
-              Qualifications: BBachelor of Commerce, Post Grad Business
-              Administration, MBA Strategy, Certified Internal Auditor,
-              Certification in Control Self Assessment
-            </p>
-            <p>
-              Skills: IT Audit, SOC Reporting, IT Internal Controls, Internal
-              Audit
-            </p>
-            <a href="#">Read More</a>
-          </div>
-        </div>
+
+<section class="team">
+<div class="team-content">
+  <h1 class="section-heading">Team</h1>
+  <p class="description">TechIsever Team.</p><a class="card" href="#!">
+    <div class="front" style="background-image: url(./Images/teamcard1.jpg)">
+      <p> <span class="title main-title">Bilal Essop (CA)SA<br></span> <br>
+        <span class="title">Years of experience:</span><br> 10 Years<br><br>
+        <span class="title">Previous Employment:<br></span>  EY, PwC<br><br>
+        <span class="title">Qualifications:<br></span> CA(SA), CISA, CET<br><br>
+        <span class="title">Skills:<br></span> Business Improvement, Emerging Technology Strategy &
+        Implementation, Robotic Process Automation, Digital
+        Transformation, Specialised Technology Risk & Assurance<br><br>
+        <span class="team-read-more">CLICK TO READ MORE <i class="fas fa-arrow-right"></i></span>
+      </p>
+    </div>
+    <div class="back">
+      <div>
+        <p>
+          <span class="title">Relevant client experience</span><br><br> Nedbank | Hollard | ArcelorMittal | ABSA | Adcorp | Hewlett Packard | Puma Energy<br><br>
+        </p>
+        <button class="button">Click Here</button>
       </div>
-    </section>
+    </div></a><a class="card" href="#!">
+    <div class="front" style="background-image: url(./Images/teamcard2.jpg)">
+      <p> <span class="title main-title">Mohammad Kajee<br></span><br>
+        <span class="title">Years of experience:</span><br> 9 Years<br><br>
+        <span class="title">Previous Employment:<br></span> Exxaro Resources Ltd<br><br>
+              <span class="title">Qualifications:<br></span> Bachelor of Science (Hons), Electrical Engineering<br><br>
+              <span class="title">Skills:<br></span> Business Improvement, Innovation, Digital Transformation,
+              Operational Excellence, Continuous Improvement<br><br>
+              <span class="team-read-more">CLICK TO READ MORE <i class="fas fa-arrow-right"></i></span>
+      </p>
+    </div>
+    <div class="back">
+      <div>
+        <p>
+          Extensive experience in business and continous improvement driving functional and operational excellence.<br><br>
+        </p>
+        <button class="button">Contact</button>
+      </div>
+    </div></a><a class="card" href="#!">
+    <div class="front" style="background-image: url(./Images/teamcard3.jpg)">
+      <p> <span class="title main-title">Asim Ansari<br></span><br>
+        <span class="title">Years of experience:</span><br> 15 Years<br><br>
+        <span class="title">Previous Employment:<br></span> EY, Hollard, Bank of Athens, Super Group,
+              Cell C<br><br>
+              <span class="title">Qualifications:<br></span> Bachelor of Commerce, Post Grad Business
+              Administration, MBA Strategy, Certified Internal Auditor,
+              Certification in Control Self Assessment<br><br>
+              <span class="title">Skills:<br></span> IT Audit, SOC Reporting, IT Internal Controls, Internal
+              Audit<br><br>
+              <span class="team-read-more">CLICK TO READ MORE <i class="fas fa-arrow-right"></i></span>
+      </p>
+    </div>
+    <div class="back">
+      <div>
+        <p>
+          IT Audit, SOC Reporting, IT Internal Controls, Internal Audit
+        </p>
+        <button class="button">Contact</button>
+      </div>
+    </div></a><a class="card bottom-card" href="#!">
+    <div class="front" style="background-image: url(./Images/teamcard4.jpg)">
+      <p> <span class="title main-title"><i class="fas fa-users"></i>
+        <br></span><br>
+        We have access to a team of trusted developers that focus on the following software development competencies:<br><br>
+        <span class="title">Automation, Insights & Analytics</span><br><br>
+         ✓ Blue Prism ✓ UiPath ✓ Automation Anywhere ✓ Microsoft Power Apps ✓ Power BI ✓ Tableau<br><br>
+        <span class="title">Database & Cloud Storage<br><br></span> ✓ SQL ✓ Aws ✓ MS Azure<br><br>
+        <span class="team-read-more">CLICK TO READ MORE <i class="fas fa-arrow-right"></i></span>
+      </p>
+    </div>
+    <div class="back">
+      <div>
+        <p>
+          <span class="title main-title">Front End Development</span><br><br> ✓ HTML ✓ CSS ✓ JavaScript ✓ Bootstrap ✓ Angular<br><br>
+          <span class="title main-title"></span>Back End Development</span><br><br> ✓ PHP ✓ Python ✓ Node.js ✓ Ruby ✓ ASP.NET
+        </p><br>
+        <button class="button">Contact</button>
+      </div>
+    </div></a>
+</div>
+</section>
+
+
+
+
+
+
 
     <!--TEAM SECTION CARDS ENDS-->
 
+
+    <!-- CONTACT SECTION STARTS -->
+
     <section class="contact" id="contact">
-      <h2>Contact us</h2>
+      <h1 class="section-heading">Contact us</h1>
       <p>Reach out to us for any inquiries.</p>
       <div class="row">
         <div class="col information">
@@ -536,6 +498,13 @@
       </div>
     </section>
 
+
+    <!-- CONTACT SECTION ENDS -->
+
+
+
+    <!-- FOOTER SECTION STARTS -->
+
     <footer>
       <div>
         <span>Copyright © 2023 | All Rights Reserved</span>
@@ -545,5 +514,7 @@
         </span>
       </div>
     </footer>
+
+    <!-- FOOTER SECT5ION ENDS -->
   </body>
 </html>

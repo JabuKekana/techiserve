@@ -1,5 +1,36 @@
  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
+ /* CUMSTOM SCROLLBAR STYLING STARTS */
+
+
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 25px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; 
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; 
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #333;
+}
+
+ /* CUMSTOM SCROLLBAR STYLING ENDS */
+
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +45,9 @@ html {
 body {
   background: #ffffff;
 }
+
+/* NAV BAR SECTION STYLING STARTS */
+
 
 header {
   position: fixed;
@@ -62,8 +96,33 @@ header {
   width: 160px;
 }
 
+@media screen and (max-width: 860px) {
+  .navbar .all-links {
+    position: fixed;
+    left: -100%;
+    width: 300px;
+    display: block;
+    height: 100vh;
+    top: 75px;
+    background: #333;
+    transition: left 0.3s ease;
+  }
 
-header a, footer a {
+  .navbar #menu-toggler:checked~.all-links {
+    left: 0;
+  }
+
+  .navbar .all-links li {
+    font-size: 18px;
+  }
+
+  .navbar #hamburger-btn {
+    display: block;
+  }
+}  
+
+
+.nav a {
   margin-left: 40px;
   text-decoration: none;
   color: rgb(4, 19, 28);
@@ -72,13 +131,19 @@ header a, footer a {
   display: inline-block;
 }
 
-header a:hover, footer a:hover {
+nav a:hover {
   color: #ddd;
 }
 
 .menu-bar {
   fill: rgb(0, 0, 0); /* Change this to your desired color */
 }
+
+
+/* NAVBAR SECTION STYLING ENDS */
+
+
+/* HOME PAGE SECTION STYLING STARTS */
 
 .homepage {
   height: 100vh;
@@ -100,7 +165,7 @@ header a:hover, footer a:hover {
   background: rgba(0, 0, 0, 0.2);
 }
 
-.homepage .content {
+.homepage .homepage-content {
   display: flex;
   height: 85%;
   z-index: 3;
@@ -109,13 +174,13 @@ header a:hover, footer a:hover {
   flex-direction: column;
 }
 
-.homepage .content h1 {
+.homepage .homepage-content h1 {
   font-size: 60px;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
-.homepage .content .text {
+.homepage .homepage-content .text {
   margin-bottom: 50px;
   color: #fff;
   font-size: 20px;
@@ -123,7 +188,7 @@ header a:hover, footer a:hover {
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
-.homepage .content .text .greenText {
+.homepage .homepage-content .text .greenText {
     margin-bottom: 50px;
     color: #8bca62;
     font-size: 20px;
@@ -131,7 +196,7 @@ header a:hover, footer a:hover {
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   }
 
-.homepage .content .hopepage-btn {
+.homepage .homepage-content .hopepage-btn {
   color: #000;
   display: block;
   text-transform: uppercase;
@@ -146,19 +211,59 @@ header a:hover, footer a:hover {
   text-decoration: none;
 }
 
-.homepage .content .hopepage-btn:hover {
+.homepage .homepage-content .hopepage-btn:hover {
   color: #fff;
   background: rgba(255,255,255,0.3);
 }
 
-section {
+@media screen and (max-width: 860px) {
+
+  .homepage .content h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .homepage .content .text {
+    font-size: 17px;
+  }
+}
+
+
+@media screen and (max-width: 860px) {
+
+  .homepage .homepage-content h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .homepage .homepage-content .text {
+    /* Adjust the font size for smaller screens */
+    font-size: 17px;
+  }
+
+  .homepage .homepage-content .text .greenText {
+    /* Adjust the font size for smaller screens */
+    font-size: 17px;
+  }
+}
+
+
+/* HOME PAGE SECTION STYLING ENDS */
+
+
+
+
+
+/* section {
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: 80px 0 0;
-}
+} */
 
-section h2 {
+/* section h2 {
   font-size: 2rem;
 }
 
@@ -173,13 +278,17 @@ section .cards {
   margin-top: 50px;
   padding: 0 10px;
   justify-content: space-between;
-} 
+}  */
+
+
 
 
 /* ABOUT SECTION STYLING STARTS HERE */
 
-section.about {
+
+.about {
   margin: 0 auto;
+  margin-top: 40px;
   max-width: 95%;
   background-color: white;
 }
@@ -197,7 +306,7 @@ section.about {
   flex: 1;
 }
 
-.image-container {
+.about-image-container {
   flex: 1;
   display: flex;
   justify-content: flex-end;
@@ -209,16 +318,20 @@ section.about {
   height: auto;
 }
 
-.image-wrapper {
+.about-image-wrapper {
   display: flex;
   align-items: center;
   margin-right: 10px; /* Changed margin-left to margin-right */
 }
 
-.heading-img {
+.about-heading-img {
   max-width: 100%;
   height: auto;
   width: 80px;
+}
+
+.about .row {
+  padding: 0 10px;
 }
 
 /* Media Query for smaller screens */
@@ -227,10 +340,13 @@ section.about {
     flex-direction: column;
   }
 
-  .image-container {
+  .about-image-container {
     justify-content: center;
   }
 }
+
+
+
 /* ABOUT SECTION STYLING ENDS HERE */
 
 
@@ -238,10 +354,17 @@ section.about {
 
 
 
-/* TARGEWTING A PROBLEM SECTION  STARTS*/
+/* TARGETING A PROBLEM SECTION  STARTS*/
 
  
-/* Common styles for all screen sizes */
+
+
+.problem-section{
+  align-items: center;
+  margin-top: 40px;
+}
+
+
 .problem-section h3 {
   padding: 40px;
   color: #333;
@@ -330,20 +453,17 @@ section.about {
   content: counter(my-counter) ". ";
 }
 
-/* Responsive styles for screen sizes smaller than 768px */
+
 @media (max-width: 768px) {
   .problem-section-list {
-    width: 90vw; /* Adjust the width as needed */
-    padding: 2rem; /* Adjust the padding as needed */
+    width: 90vw; 
+    padding: 2rem; 
   }
 }
 
-/* Additional media queries for other screen sizes can be added as needed */
 
+/* TARGETING A PROBLEM SECTION ENDS */
 
-
-
-/* TARGEWTING A PROBLEM SECTION ENDS */
 
 
 
@@ -351,109 +471,12 @@ section.about {
 
 
 
-/* Common styles for all screen sizes */
-.use-cases-container {
-  padding: 0 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+/* USE CASES SECTION STYLING STARTS */
 
-.use-cases-container .card {
-  height: 280px;
-  max-width: 350px;
-  margin: 0 20px;
-  background: white;
-  transition: 0.4s;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-}
 
-.use-cases-container .card .img {
-  height: 200px;
-  width: 100%;
-}
 
-.use-cases-container .card .img img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
 
-.use-cases-container .card .top-text {
-  padding: 5px;
-}
-
-.use-cases-container .card .top-text .name {
-  font-size: 25px;
-  font-weight: 600;
-  color: #202020;
-}
-
-.use-cases-container .card .top-text p {
-  font-size: 20px;
-  font-weight: 600;
-  color: #e74c3c;
-  line-height: 20px;
-}
-
-.use-cases-container .card .bottom-text {
-  padding: 0 20px 10px 20px;
-  margin-top: 5px;
-  background: white;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.1s;
-}
-
-.use-cases-container .card:hover .bottom-text {
-  opacity: 1;
-  visibility: visible;
-}
-
-.use-cases-container .card .bottom-text .text {
-  text-align: justify;
-}
-
-.use-cases-container .card .bottom-text .btn {
-  margin: 10px 0;
-  text-align: left;
-}
-
-.use-cases-container .card .bottom-text .btn a {
-  text-decoration: none;
-  background: #e74c3c;
-  color: #f2f2f2;
-  padding: 5px 8px;
-  border-radius: 3px;
-  display: inline-flex;
-  transition: 0.2s;
-}
-
-.use-cases-container .card .bottom-text .btn a:hover {
-  transform: scale(0.9);
-}
-
-/* Responsive styles for screen sizes smaller than 978px */
-@media screen and (max-width: 978px) {
-  .use-cases-container {
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
-  }
-
-  .use-cases-container .card {
-    max-width: 100%;
-    margin: 20px 0;
-  }
-
-  /* Add fixed height to .use-cases section when the cards are expanded */
-  .use-cases.expanded {
-    height: auto; /* Set to auto to adjust the height as per content */
-  }
-}
-
-/* Additional media queries for other screen sizes can be added as needed */
+/* USE CASES SECTION STYLING ENDS */
 
 
 
@@ -467,9 +490,141 @@ section.about {
 
 /* SERVICES SECTION STYLING STARTS */
 
+.services{
+  margin-top: 30px;
+}
+
+.services-wrapper{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.services-card{
+ max-width: 300px;
+  min-height: 250px;
+  background: #02b875;
+  padding: 30px;
+   border-radius: 3px;
+  box-sizing: border-box;
+  color: #FFF;
+  margin:20px;
+   box-shadow: rgb(50 50 93 / 25%) 0px 30px 60px -12px, rgb(0 0 0 / 30%) 0px 18px 36px -18px;
+}
+.services-card:nth-child(2){
+ background: #4181ee;
+}
+.services-card:last-child{
+ background: #673ab7;
+}
+.services-card-title{
+  margin-top: 0;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+.services-card-content{
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+.services-card-btn {
+  all: unset;
+  display: block;
+  margin-left: auto;
+  border: 2px solid #FFF;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-size: 10px;
+  font-weight: 600;
+  transition: all 0.5s;
+  cursor: pointer;
+  letter-spacing: 1.2px;
+}
+
+.services-card-btn i {
+  font-size: 20px;
+
+}
+
+.services-card:nth-child(2) .card-btn:hover{
+ color:#4181ee;
+ background: #FFF;
+}
+.services-card:last-child .card-btn:hover{
+ color:#673ab7;
+  background: #FFF;
+}
 
 
-  
+.services .tile {
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: white;
+  width: 70%;
+  height: 250px;
+  margin: 1em;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.services .tile-img {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: none;
+  width: 15em;
+  height: inherit;
+  float: left;
+}
+
+.services .tile-info {
+  height: inherit;
+  padding: 1em;
+  margin-left: 15em; 
+}
+
+.services .tile-info ul{
+  height: inherit;
+  padding: 1em;
+  margin-left: 10px; 
+}
+
+
+@media screen and (max-width: 768px) {
+  .services .tile {
+    width: 100%;
+    margin: 0;
+    border-radius: 0; /* You may adjust this based on your design preferences */
+    flex-direction: column; /* Update flex-direction to column for vertical stacking */
+  }
+
+  .services .tile-img {
+    width: 100%;
+    height: auto; /* Ensure the image scales proportionally */
+    max-height: 200px; /* Set a maximum height for the image */
+    margin-bottom: 1em; /* Add margin between image and text on small screens */
+  }
+
+  .services .tile-info {
+    margin-left: 0;
+    text-align: left; /* Center the text on small screens */
+    order: -1; /* Move the tile-info element above the image on small screens */
+  }
+
+  .services .tile h1 {
+    font-size: 20px; /* Adjust font size for better visibility on small screens */
+  }
+
+  .services .tile p {
+    font-size: 14px; /* Adjust font size for better visibility on small screens */
+  }
+}
+
+
 
 
 /* SERVICES SECTION STYLING ENDS */
@@ -501,6 +656,7 @@ section.about {
   font-family: "Poppins", sans-serif;
   color: var(--color);
   background: var(--bgColor);
+  margin-top: 30px;
 }
 
 .journey-section h1 {
@@ -683,144 +839,281 @@ section.about {
 
 
 
+
+
+
+/* USE CASES SECTION STYLUING STARTS */
+
+/* Styling for the background of the USE CASES SECTION */
+.uses-cases {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /* Add any other background styles as needed */
+  margin-top: 30px;
+}
+
+/* Rest of your existing styling for the USE CASES SECTION */
+summary[role=button] {
+  background-color: none;
+  color: #000000;
+  padding: 1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+summary[role=button]:hover, summary[role=button]:focus {
+  color: #0f0;
+}
+
+summary::marker {
+  color: #0f0;
+}
+
+details {
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin-bottom: 0.25em;
+}
+
+details .use-cases-info {
+  padding: 0 1em;
+}
+
+/* USE CASES SECTION STYLING ENDS */
+
+
+
+
+
+
+
+
+
+
+
+
 /* TEAM SECTION STYLING STARTS */
 
-.team-section {
+
+
+.team {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat',sans-serif;
+  height: 100%;
+  background-color: #ecf0f9;
+  background-attachment: fixed;
 }
-.team-section .cards{
-  max-width: 1100px;
+
+.team-content {
+  display: flex;
   margin: 0 auto;
-  text-align: center;
-  padding: 30px;
-}
-.team-section .cards h2.header{
-  font-size: 40px;
-  margin: 0 0 30px 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-.team-section .services{
-  display: flex;
+  justify-content: center;
   align-items: center;
-}
-.team-section .team-content{
-  display: flex;
   flex-wrap: wrap;
-  flex: 1;
-  margin: 20px;
-  padding: 20px;
-  border: 2px solid black;
-  border-radius: 4px;
-  transition: all .3s ease;
-}
-.team-section .team-content .fab{
-  font-size: 70px;
-  margin: 16px 0;
-}
-.team-section .team-content > *{
-  flex: 1 1 100%;
-}
-.team-section .team-content:hover{
-  color: white;
-}
-.team-section .team-content:hover a{
-  border-color: white;
-  background: white;
-}
-.team-section .content-1:hover{
-  border-color: #1DA1F2;
-  background: #1DA1F2;
-}
-.team-section .content-1:hover a{
-  color: #1DA1F2;
-}
-.team-section .content-2:hover{
-  border-color: #E1306C;
-  background: #E1306C;
-}
-.team-section .content-2:hover a{
-  color: #E1306C;
-}
-.team-section .content-3:hover{
-  border-color: #ff0000;
-  background: #ff0000;
-}
-.team-section .content-3:hover a{
-  color: #ff0000;
-}
-.team-section .team-content h2{
-  font-size: 30px;
-  margin: 16px 0;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-.team-section .team-content p{
-  font-size: 17px;
-  font-family: 'Poppins',sans-serif;
-}
-.team-section .team-content a{
-  margin: 22px 0;
-  background: black;
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  border: 1px solid black;
-  padding: 15px 0;
-  border-radius: 25px;
-  transition: .3s ease;
-}
-.team-section .team-content a:hover{
-  border-radius: 4px;
-}
-@media (max-width: 900px) {
-  .team-section .services{
-    display: flex;
-    flex-direction: column;
-  }
-} */
-
-/* Flip effect styles */
-.flip-container {
-  perspective: 1000px;
+  max-width: 1000px;
+  padding-top: 80px;
 }
 
-.flipper {
+.section-heading {
+  width: 100%;
+  margin-left: 1rem;
+  font-weight: 900;
+  font-size: 1.618rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1ch;
+  line-height: 1;
+  padding-bottom: 0.5em;
+  margin-bottom: 1rem;
   position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
+}
+.section-heading:after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(135deg, #1a9be6, #1a57e6);
+  bottom: 0;
+}
+
+.description {
+  width: 100%;
+  margin-top: 0;
+  margin-left: 1rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  color: inherit;
+  cursor: pointer;
+  width: calc(33% - 2rem);
+  min-width: calc(33% - 2rem);
+  height: 400px;
+  min-height: 400px;
+  perspective: 1000px;
+  margin: 1rem;
+  position: relative;
+}
+@media screen and (max-width: 800px) {
+  .card {
+    width: calc(50% - 2rem);
+  }
+}
+@media screen and (max-width: 500px) {
+  .card {
+    width: 100%;
+  }
 }
 
 .front,
 .back {
+  display: flex;
+  border-radius: 6px;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 0;
-  left: 0;
+  height: 100%;
   width: 100%;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: ease-in-out 600ms;
 }
 
 .front {
-  z-index: 2;
+  background-size: cover;
+  padding: 2px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  overflow: hidden;
+  font-family: Poppins, sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.front .front-content{
+  font-size: 10px;
+  font-weight: 600;
+}
+.front:before {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #1a9be6, #1a57e6);
+  opacity: 0.25;
+  z-index: -1;
+}
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+.card:nth-child(even):hover .front {
+  transform: rotateY(-180deg);
 }
 
 .back {
+  background: #fff;
+  transform: rotateY(-180deg);
+  padding: 0 2em;
+}
+.back .button {
+  background: linear-gradient(135deg, #1a9be6, #1a57e6);
+}
+.back .button:before {
+  box-shadow: 0 0 10px 10px rgba(26, 87, 230, 0.25);
+  background-color: rgba(26, 87, 230, 0.25);
+}
+.card:hover .back {
+  transform: rotateY(0deg);
+}
+.card:nth-child(even) .back {
   transform: rotateY(180deg);
-  background-color: #f1f1f1;
+}
+.card:nth-child(even) .back .button {
+  background: linear-gradient(135deg, #e61a80, #e61a3c);
+}
+.card:nth-child(even) .back .button:before {
+  box-shadow: 0 0 10px 10px rgba(230, 26, 60, 0.25);
+  background-color: rgba(230, 26, 60, 0.25);
+}
+.card:nth-child(even):hover .back {
+  transform: rotateY(0deg);
 }
 
-.team-section .team-content.expanded .back {
+.button {
+  transform: translateZ(40px);
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-weight: bold;
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 100px;
+  font: inherit;
+  border: none;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 300ms ease;
+}
+.button:before {
+  transition: 300ms ease;
+  position: absolute;
   display: block;
+  content: "";
+  transform: translateZ(-40px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  border-radius: 100px;
+  left: 10px;
+  top: 16px;
+}
+.button:hover {
+  transform: translateZ(55px);
+}
+.button:hover:before {
+  transform: translateZ(-55px);
+}
+.button:active {
+  transform: translateZ(20px);
+}
+.button:active:before {
+  transform: translateZ(-20px);
+  top: 12px;
 }
 
-.team-section .team-content:not(.expanded) .back {
-  display: none;
+
+.front .title{
+  font-size: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+.front .main-title{
+  font-size: 20px;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.front .team-read-more{
+  color: #000000;
 }
 
-/* ... Remaining CSS styles ... */
+
+
+
+
+
+
+
+
+
+
 
 
 /* TEAM SECTION STYLING ENDS */
@@ -834,7 +1127,7 @@ section.about {
 
 
 
-section .cards .card {
+.services .cards .card {
   background: #f2f2f2;
   padding: 40px 15px;
   list-style: none;
@@ -845,17 +1138,17 @@ section .cards .card {
   text-align: center;
 }
 
-.portfolio .cards .card {
+.services .cards .card {
   padding: 0 0 20px;
 }
 
-.services .card i {
+/* .services .card i {
     font-size: 30px;
     color: #8bca62;
     margin-bottom: 30px;
 }
 
-.portfolio .card img {
+.services .card img {
   width: 100%;
   padding-bottom: 10px;
   aspect-ratio: 16 / 9;
@@ -863,15 +1156,22 @@ section .cards .card {
   border-radius: 7px;
 }
 
-.cards .card p {
+.services .cards .card p {
   padding: 0 15px;
   margin-top: 5px;
-}
+} */
 
 
-.about .row {
-  padding: 0 10px;
-}
+
+
+
+
+
+
+
+
+
+/* CONTACT SECTION STYLING STARTS */
 
 .contact .row {
   margin: 60px 0 90px;
@@ -932,6 +1232,35 @@ section .cards .card {
   background: #525252;
 }
 
+@media screen and (max-width: 860px) {
+
+  .contact .row {
+    flex-direction: column;
+  }
+
+  .contact .row .col {
+    width: 100%;
+  }
+
+  .contact .row .col:last-child {
+    margin-top: 40px;
+  }
+}
+
+
+/* CONTACT SECTION STYLING ENDS */
+
+
+
+
+
+
+
+/* FOOTER SECTION STYLING STARTS */
+
+
+
+
 footer {
   width: 100%;
   display: flex;
@@ -956,74 +1285,58 @@ footer a {
   padding: 0;
 }
 
+footer a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: rgb(4, 19, 28);
+  height: 100%;
+  padding: 20px 0;
+  display: inline-block;
+}
+
+footer a:hover {
+  color: #ddd;
+}
+
+
+
 @media screen and (max-width: 860px) {
-  .navbar .all-links {
-    position: fixed;
-    left: -100%;
-    width: 300px;
-    display: block;
-    height: 100vh;
-    top: 75px;
-    background: #333;
-    transition: left 0.3s ease;
+  footer a {
+    height: 0;
   }
+}
 
-  .navbar #menu-toggler:checked~.all-links {
-    left: 0;
-  }
 
-  .navbar .all-links li {
-    font-size: 18px;
-  }
+/* FOOTER SECTION STYLING ENDS */
 
-  .navbar #hamburger-btn {
-    display: block;
-  }
 
-  section > p {
+
+
+
+
+
+
+
+@media screen and (max-width: 860px) {
+
+  /* section > p {
     text-align: center;
-  }
+  } */
 
-  section .cards .card {
+  .services .cards .card {
     width: calc(100% / 2 - 15px);
     margin-bottom: 30px;
-  }
-
-  .homepage .content h1 {
-    font-size: 40px;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-
-  .homepage .content .text {
-    font-size: 17px;
   }
 
   .content a {
     font-size: 17px;
     padding: 9px 20px;
   }
-
-  .contact .row {
-    flex-direction: column;
-  }
-
-  .contact .row .col {
-    width: 100%;
-  }
-
-  .contact .row .col:last-child {
-    margin-top: 40px;
-  }
-
-  footer a {
-    height: 0;
-  }
 }
-
+/* 
 @media screen and (max-width: 560px) {
-  section .cards .card {
+  .services .cards .card {
     width: 100%;
     margin-bottom: 30px;
   }
-} 
+}  */

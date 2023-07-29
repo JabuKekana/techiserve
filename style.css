@@ -137,6 +137,8 @@ nav a:hover {
 
 .menu-bar {
   fill: rgb(0, 0, 0); /* Change this to your desired color */
+  height: 50px;
+  top: 0;
 }
 
 
@@ -150,25 +152,29 @@ nav a:hover {
   width: 100%;
   position: relative;
   background: url("./Images/header-bg.png");
-  background-position: center 65%;
+  background-position: center ;
   background-size: cover;
   background-attachment: fixed;
 }
 
-.homepage::before {
+.homepage-line{
+  color: #ffffff;
+}
+
+/* .homepage::before {
   content: "";
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.2);
-}
+  z-index: 1;
+} */
 
 .homepage .homepage-content {
   display: flex;
   height: 85%;
-  z-index: 3;
+  z-index: 2;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -178,14 +184,15 @@ nav a:hover {
   font-size: 60px;
   font-weight: 700;
   margin-bottom: 10px;
+  color: #ffffff;
 }
 
 .homepage .homepage-content .text {
   margin-bottom: 50px;
-  color: #fff;
+  color: #ffffff;
   font-size: 20px;
   text-align: center;
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  text-shadow: none;
 }
 
 .homepage .homepage-content .text .greenText {
@@ -193,7 +200,7 @@ nav a:hover {
     color: #8bca62;
     font-size: 20px;
     text-align: center;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: none;
   }
 
 .homepage .homepage-content .hopepage-btn {
@@ -212,7 +219,7 @@ nav a:hover {
 }
 
 .homepage .homepage-content .hopepage-btn:hover {
-  color: #fff;
+  color: #9b1c1c;
   background: rgba(255,255,255,0.3);
 }
 
@@ -239,46 +246,16 @@ nav a:hover {
   }
 
   .homepage .homepage-content .text {
-    /* Adjust the font size for smaller screens */
     font-size: 17px;
   }
 
   .homepage .homepage-content .text .greenText {
-    /* Adjust the font size for smaller screens */
     font-size: 17px;
   }
 }
 
 
 /* HOME PAGE SECTION STYLING ENDS */
-
-
-
-
-
-/* section {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 80px 0 0;
-} */
-
-/* section h2 {
-  font-size: 2rem;
-}
-
-section > p {
-  text-align: center;
-}
-
-section .cards {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin-top: 50px;
-  padding: 0 10px;
-  justify-content: space-between;
-}  */
 
 
 
@@ -362,6 +339,10 @@ section .cards {
 .problem-section{
   align-items: center;
   margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -373,9 +354,9 @@ section .cards {
 
 :root {
   --color-text: #fff;
-  --color-background: linear-gradient(to right bottom, #ffb88e, #ea5753);
-  --color-container: linear-gradient(to right bottom, rgba(255, 184, 142, 0.44), rgba(255, 255, 255, 0.5));
-  --color-list: rgba(234, 87, 83, 0.7);
+  --color-background: linear-gradient(to right bottom, #000000, #000000);
+  --color-container: linear-gradient(to right bottom, rgba(24, 24, 24, 0.44), rgba(255, 255, 255, 0.5));
+  --color-list: rgba(83, 86, 234, 0.7);
 }
 
 .problem-section-list {
@@ -412,7 +393,7 @@ section .cards {
   margin-bottom: -25rem;
   position: absolute;
   border-radius: 50%;
-  background: rgba(255, 185, 142, 0.6);
+  background: rgba(100, 127, 163, 0.6);
 }
 
 .problem-section-list h1 {
@@ -424,8 +405,8 @@ section .cards {
   text-align: center;
   color: var(--color-text);
   margin-bottom: 3rem;
-  box-shadow: 0 7px 2rem #ea5753;
-  background: rgba(234, 87, 83, 0.7);
+  box-shadow: 0 7px 2rem #070707;
+  background: rgba(83, 123, 234, 0.7);
 }
 
 .problem-section-list ol {
@@ -440,10 +421,10 @@ section .cards {
 }
 
 .problem-section-list li {
-  width: 40rem;
+  width: 38rem;
   text-align: center;
   color: var(--color-text);
-  border-radius: 3rem;
+  border-radius: 4rem;
   background: var(--color-list);
   counter-increment: my-counter;
   padding: 1.1rem 1.5rem 1.1rem 1.5rem;
@@ -498,6 +479,11 @@ section .cards {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.services-description{
+  text-align: center;
+  margin: 40px 0 40px 0;
 }
 .services-card{
  max-width: 300px;
@@ -598,29 +584,29 @@ section .cards {
   .services .tile {
     width: 100%;
     margin: 0;
-    border-radius: 0; /* You may adjust this based on your design preferences */
-    flex-direction: column; /* Update flex-direction to column for vertical stacking */
+    border-radius: 0; 
+    flex-direction: column; 
   }
 
   .services .tile-img {
     width: 100%;
-    height: auto; /* Ensure the image scales proportionally */
-    max-height: 200px; /* Set a maximum height for the image */
-    margin-bottom: 1em; /* Add margin between image and text on small screens */
+    height: auto; 
+    max-height: 200px; 
+    margin-bottom: 1em; 
   }
 
   .services .tile-info {
     margin-left: 0;
-    text-align: left; /* Center the text on small screens */
-    order: -1; /* Move the tile-info element above the image on small screens */
+    text-align: left; 
+    order: -1;
   }
 
   .services .tile h1 {
-    font-size: 20px; /* Adjust font size for better visibility on small screens */
+    font-size: 20px; 
   }
 
   .services .tile p {
-    font-size: 14px; /* Adjust font size for better visibility on small screens */
+    font-size: 14px; 
   }
 }
 
@@ -632,10 +618,78 @@ section .cards {
 
 
 
+
+
+
+
+
+
+
+/* DOWNLOADABLE SERVICES SECTION STYLINGS STARTS */
+
+      .downloadable-services {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          padding: 40px;
+          background-color: rgb(229, 229, 229);
+          border-end-end-radius: 40px;
+          margin: 30px 30px 30px 30px;
+      }
+
+      .downloadable-services img {
+          max-width: 100%;
+          height: auto;
+          margin-left: 20px;
+          flex: 0 0 50%; /* Set image width to 50% of the container */
+      }
+
+      .downloadable-services .services-info {
+          flex: 0 0 50%; /* Set info width to 50% of the container */
+          text-align: center;
+          padding: 20px;
+      }
+
+      .download-btn {
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          padding: 10px 15px 10px 15px;
+          font-size: 16px;
+          border-radius: 25px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
+      }
+
+      .download-btn:hover {
+          background-color: #0056b3;
+      }
+
+      /* Responsive styles */
+      @media (max-width: 768px) {
+          .downloadable-services {
+              flex-direction: column;
+          }
+
+          .downloadable-services img,
+          .downloadable-services .services-info {
+              flex: 0 0 100%; /* On smaller screens, make both elements take full width */
+          }
+      }
+
+/* DOWNLOADABLE SERVICES SECTION STYLINGS STARTS */
+
+
+
+
+
+
+
+
 /* JOURNEY SECTION STYLING STARTS */
 
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 
 .journey-section,
 .journey-section::before,
@@ -659,9 +713,6 @@ section .cards {
   margin-top: 30px;
 }
 
-.journey-section h1 {
-  text-align: center;
-}
 .journey-section h3 {
   text-align: center;
 }
@@ -679,7 +730,7 @@ section .cards {
   margin-inline: auto;
 }
 
-/* line */
+
 .journey-unordered-list::before {
   content: "";
   grid-column: 1;
@@ -688,14 +739,12 @@ section .cards {
   border-radius: calc(var(--line-w) / 2);
 }
 
-/* columns*/
 
-/* row gaps */
 .journey-unordered-list li:not(:last-child) {
   margin-bottom: var(--row-gap);
 }
 
-/* card */
+
 .journey-unordered-list li {
   grid-column: 2;
   --inlineP: 1.5rem;
@@ -705,27 +754,23 @@ section .cards {
   grid-template-rows: min-content min-content min-content;
 }
 
-/* date */
+
 .journey-unordered-list li .date {
   --dateH: 3rem;
   height: var(--dateH);
   margin-inline: calc(var(--inlineP) * -1);
-
   text-align: center;
   background-color: var(--accent-color);
-
   color: white;
-  font-size: 0.95rem;
+  font-size: 0.90rem;
   font-weight: 700;
-
   display: grid;
   place-content: center;
   position: relative;
-
   border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
 }
 
-/* date flap */
+
 .journey-unordered-list li .date::before {
   content: "";
   width: var(--inlineP);
@@ -734,12 +779,11 @@ section .cards {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
   position: absolute;
   top: 100%;
-
   clip-path: polygon(0 0, 100% 0, 0 100%);
   right: 0;
 }
 
-/* circle */
+
 .journey-unordered-list li .date::after {
   content: "";
   position: absolute;
@@ -749,12 +793,11 @@ section .cards {
   border: 0.3rem solid var(--accent-color);
   border-radius: 50%;
   top: 50%;
-
   transform: translate(50%, -50%);
   right: calc(100% + var(--col-gap) + var(--line-w) / 2);
 }
 
-/* title descr */
+
 .journey-unordered-list li .title,
 .journey-unordered-list li .descr {
   background: var(--bgColor);
@@ -772,7 +815,7 @@ section .cards {
   font-weight: 300;
 }
 
-/* shadows */
+
 .journey-unordered-list li .title::before,
 .journey-unordered-list li .descr::before {
   content: "";
@@ -808,7 +851,7 @@ section .cards {
     grid-column: 3;
   }
 
-  /* start second card */
+
   .journey-unordered-list li:nth-child(2) {
     grid-row: 2/4;
   }
@@ -844,16 +887,15 @@ section .cards {
 
 /* USE CASES SECTION STYLUING STARTS */
 
-/* Styling for the background of the USE CASES SECTION */
+
 .uses-cases {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  /* Add any other background styles as needed */
-  margin-top: 30px;
+  margin: 40px 0 50px 0;
 }
 
-/* Rest of your existing styling for the USE CASES SECTION */
+
 summary[role=button] {
   background-color: none;
   color: #000000;
@@ -899,7 +941,7 @@ details .use-cases-info {
 
 .team {
   margin: 0;
-  padding: 0;
+  padding-top: 40px;
   height: 100%;
   background-color: #ecf0f9;
   background-attachment: fixed;
@@ -911,13 +953,13 @@ details .use-cases-info {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 1000px;
+  max-width: 95%;
   padding-top: 80px;
 }
 
 .section-heading {
-  width: 100%;
-  margin-left: 1rem;
+  width: 90%;
+  margin-left: 3rem;
   font-weight: 900;
   font-size: 1.618rem;
   text-transform: uppercase;
@@ -926,6 +968,7 @@ details .use-cases-info {
   padding-bottom: 0.5em;
   margin-bottom: 1rem;
   position: relative;
+  align-items: center;
 }
 .section-heading:after {
   display: block;
@@ -1173,6 +1216,10 @@ details .use-cases-info {
 
 /* CONTACT SECTION STYLING STARTS */
 
+.contact{
+  margin-top: 50px;
+}
+
 .contact .row {
   margin: 60px 0 90px;
   display: flex;
@@ -1288,14 +1335,14 @@ footer a {
 footer a {
   margin-left: 40px;
   text-decoration: none;
-  color: rgb(4, 19, 28);
+  color: rgb(255, 255, 255);
   height: 100%;
   padding: 20px 0;
   display: inline-block;
 }
 
 footer a:hover {
-  color: #ddd;
+  color: #535353;
 }
 
 

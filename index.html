@@ -32,18 +32,17 @@
           </svg>
         </label>
         <ul class="all-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <!-- <li><a href="#services">Services</a></li> -->
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#home" onclick="closeMenu()">Home</a></li>
+          <li><a href="#about" onclick="closeMenu()">About</a></li>
+          <li><a href="#services" onclick="closeMenu()">Services</a></li>
+          <li><a href="#team" onclick="closeMenu()">Team</a></li>
+          <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <!-- NAV BAR SECTION ENDS -->
-
-
+ 
 
     <!--HOME PAGE SECTION ENDS-->
 
@@ -52,9 +51,11 @@
         <div class="text">
           <h1>WELCOME TO TECHISERVE</h1>
           <h4>
-            Business Optimization |
-            <span class="greenText">Digital Transformation</span> | Smart
-            Solutions
+            Business Optimization
+            <span class="homepage-line">|</span>
+            <span class="greenText">Digital Transformation</span>
+            <span class="homepage-line">|</span>
+            Smart Solutions
           </h4>
         </div>
         <a href="#services" class="hopepage-btn">Our Services</a>
@@ -103,6 +104,11 @@
         </div>
       </div>
     </section>
+
+
+
+
+
 
 
     <!--ABOUT US SECTION ENDS-->
@@ -157,9 +163,9 @@
     <!--SERVICES SECTION STARTS-->
 
 
-    <section class="services">
+    <section class="services" id="services">
       <h1 class="section-heading">Our Services</h1>
-      <p>
+      <p class="services-description">
         Our service offerings are focused to enable you to optimize, standardize, centralize and digitize your business operating processes.
       </p>
       <div class="services-wrapper">
@@ -217,6 +223,9 @@
 
 
     <!--SERVICES SECTION ENDS-->
+
+
+
 
     <!--THE JOURNEY SECTION STARTS-->
 
@@ -371,10 +380,11 @@
     <!--TEAM SECTION CARDS STARTS-->
 
 
-<section class="team">
-<div class="team-content">
+<section class="team" id="team">
   <h1 class="section-heading">Team</h1>
-  <p class="description">TechIsever Team.</p><a class="card" href="#!">
+<div class="team-content">
+  <!-- <p class="description">TechIsever Team.</p> -->
+  <a class="card" href="#!">
     <div class="front" style="background-image: url(./Images/teamcard1.jpg)">
       <p> <span class="title main-title">Bilal Essop (CA)SA<br></span> <br>
         <span class="title">Years of experience:</span><br> 10 Years<br><br>
@@ -464,11 +474,32 @@
     <!--TEAM SECTION CARDS ENDS-->
 
 
+
+
+    <!-- DOWNLOADABLE SERVICES SECTION STARTS -->
+
+
+    <section class="downloadable-services">
+      <div class="services-info">
+          <h4>Download our Services Information</h4>
+          <button class="download-btn">Download</button>
+      </div>
+
+      <div class="services-image">
+          <img src="./Images/Scan-Image.png" alt="Services Image">
+      </div>
+  </section>
+
+    <!-- DOWNLOADABLE SERVICES SECTION ENDS -->
+
+
+
+
     <!-- CONTACT SECTION STARTS -->
 
     <section class="contact" id="contact">
       <h1 class="section-heading">Contact us</h1>
-      <p>Reach out to us for any inquiries.</p>
+      <!-- <p>Reach out to us for any inquiries.</p> -->
       <div class="row">
         <div class="col information">
           <div class="contact-details">
@@ -500,6 +531,7 @@
 
 
     <!-- CONTACT SECTION ENDS -->
+    
 
 
 
@@ -510,11 +542,23 @@
         <span>Copyright © 2023 | All Rights Reserved</span>
         <span class="link">
           <a href="#">Home</a>
-          <a href="#contact">Contact</a>
+          <a href="#about">about</a>
         </span>
       </div>
     </footer>
 
     <!-- FOOTER SECT5ION ENDS -->
+
+    <script src="./main.js"></script>
+    <script>
+      // JavaScript function to close the vertical menu
+      function closeMenu() {
+        const menuToggler = document.getElementById('menu-toggler');
+        if (menuToggler.checked) {
+          menuToggler.checked = false;
+        }
+      }
+    </script>
+    
   </body>
 </html>

@@ -442,6 +442,20 @@ nav a:hover {
   }
 }
 
+@media (max-width: 768px) {
+  .problem-section-list {
+    width: 90vw; 
+    padding: 2rem;
+  }
+
+  .problem-section-list li {
+    width: 90%;
+    padding: 1rem; /* Adjust this value as needed */
+  }
+}
+
+
+
 
 /* TARGETING A PROBLEM SECTION ENDS */
 

@@ -68,7 +68,7 @@
 
     <!--ABOUT US SECTION STARTS-->
 
-    <section class="about" section="about">
+    <section class="about" id="about">
       <div class="about-container">
         <h1 class="section-heading">About</h1>
         <div class="row">
@@ -419,7 +419,7 @@
         <p>
           Extensive experience in business and continous improvement driving functional and operational excellence.<br><br>
         </p>
-        <button class="button">Contact</button>
+        <button class="button" id="contactButton">Contact</button>
       </div>
     </div></a><a class="card" href="#!">
     <div class="front" style="background-image: url(./Images/teamcard3.jpg)">
@@ -440,7 +440,7 @@
         <p>
           IT Audit, SOC Reporting, IT Internal Controls, Internal Audit
         </p>
-        <button class="button">Contact</button>
+        <button class="button" id="contactButton">Contact</button>
       </div>
     </div></a><a class="card bottom-card" href="#!">
     <div class="front" style="background-image: url(./Images/teamcard4.jpg)">
@@ -459,15 +459,11 @@
           <span class="title main-title">Front End Development</span><br><br> ✓ HTML ✓ CSS ✓ JavaScript ✓ Bootstrap ✓ Angular<br><br>
           <span class="title main-title"></span>Back End Development</span><br><br> ✓ PHP ✓ Python ✓ Node.js ✓ Ruby ✓ ASP.NET
         </p><br>
-        <button class="button">Contact</button>
+        <button class="button" id="contactButton">Contact</button>
       </div>
     </div></a>
 </div>
 </section>
-
-
-
-
 
 
 
@@ -482,7 +478,7 @@
     <section class="downloadable-services">
       <div class="services-info">
           <h4>Download our Services Information</h4>
-          <button class="download-btn">Download</button>
+          <a href="./techiserve_consulting.pdf" class="download-btn" download="techiserve_consulting.pdf">Download</a>
       </div>
 
       <div class="services-image">
@@ -499,17 +495,15 @@
 
     <section class="contact" id="contact">
       <h1 class="section-heading">Contact us</h1>
-      <!-- <p>Reach out to us for any inquiries.</p> -->
       <div class="row">
         <div class="col information">
           <div class="contact-details">
             <p>
-              <i class="fas fa-map-marker-alt"></i> 123 Campsite Avenue,
-              Wilderness, CA 98765
+              <i class="fas fa-map-marker-alt"></i> South Africa
             </p>
-            <p><i class="fas fa-envelope"></i> email@techiserve.com</p>
-            <p><i class="fas fa-phone"></i> (+27) 123-4567</p>
-            <p><i class="fas fa-phone"></i> (+27) 765-4321</p>
+            <p><i class="fas fa-envelope"></i> b.essop@ techiserve.com</p>
+            <p><i class="fas fa-phone"></i> (+27) 79 122 1144</p>
+            <p><i class="fas fa-phone"></i> (+27) 83 459 1786</p>
             <p>
               <i class="fas fa-clock"></i> Monday - Friday: 9:00 AM - 5:00 PM
             </p>
@@ -547,7 +541,7 @@
       </div>
     </footer>
 
-    <!-- FOOTER SECT5ION ENDS -->
+    <!-- FOOTER SECTION ENDS -->
 
     <script src="./main.js"></script>
     <script>
@@ -558,6 +552,16 @@
           menuToggler.checked = false;
         }
       }
+
+      //Contact button in Team's section
+      document.addEventListener('DOMContentLoaded', function() {
+    const contactButton = document.getElementById('contactButton');
+    const contactSection = document.getElementById('contact');
+
+    contactButton.addEventListener('click', function() {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
     </script>
     
   </body>
